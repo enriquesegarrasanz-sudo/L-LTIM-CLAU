@@ -56,7 +56,7 @@ La direcció visual és **editorial cinematogràfica**: fons gairebé negre, com
 - Si falla l'extracció d'un PDF o no coincideix el recompte dels sis fulls, la publicació es bloqueja fins a revisar el contingut.
 - Els PDF originals sempre quedaran disponibles com a fallback del lector web.
 
-## Qualitat y verificació
+## Qualitat i verificació
 
 - Plataforma de publicació: OpenAI Sites, amb una URL pública verificable i compartible.
 - La versió de producció ha de compilar sense errors i la URL publicada ha de respondre correctament.
