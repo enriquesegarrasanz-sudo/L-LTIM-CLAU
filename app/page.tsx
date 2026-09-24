@@ -13,7 +13,7 @@ type GalleryImage = { src: string; alt: { cat: string; es: string } };
 
 const copy = {
   cat: {
-    nav: ['Mirada', 'Referències', 'Direcció', 'Construcció', 'Intimitat', 'Guió'],
+    nav: ['Mirada', 'Referències', 'Direcció', 'Construcció', 'Intimitat', 'Storyboard', 'Guió'],
     eyebrow: 'Dossier visual · Curtmetratge · 3’30”', subtitle: 'Un refugi sota la guerra. Dos cossos aferrats a la vida.', scroll: 'Entrar al dossier',
     miradaLabel: '01 — La mirada', miradaTitle: 'La intimitat com a refugi', miradaBody: 'L’espai és estret, fosc i gairebé abstracte. A fora, la guerra. A dins, una sexualitat viscuda com a afecte, necessitat i últim acte de llibertat.',
     chapters: [
@@ -37,12 +37,13 @@ const copy = {
       ['Storyboard i planificació', 'La seqüència íntima comptarà amb un storyboard específic on es podrà veure pla per pla la posició dels intèrprets i de càmera, l’enquadrament, les parts del cos visibles, les accions representades i els elements que quedaran fora de camp.', 'L’objectiu és eliminar al màxim la incertesa abans d’arribar al set. També es realitzaran proves prèvies d’enquadrament i il·luminació perquè els intèrprets puguin entendre visualment com serà representada la intimitat en la pel·lícula.'],
       ['Rodatge', 'Les escenes íntimes es rodaran amb l’equip mínim imprescindible. Qualsevol intèrpret podrà comunicar un límit, incomoditat o necessitat de modificar una acció durant el procés.', 'La intenció és construir un espai de treball basat en la preparació, la comunicació i la confiança, perquè la vulnerabilitat que necessita la història pugui existir dins d’un entorn segur i controlat.'],
     ],
+    storyboardLabel: '06 — Storyboard', storyboardTitle: 'La seqüència, pla a pla', storyboardIntro: 'Una guia visual de la seqüència íntima: enquadraments, gestos, mirades i posicions de càmera pensats abans d’arribar al rodatge.', shot: 'Pla',
     previousLabel: 'Referència de treball anterior', previousTitle: 'Claustrofòbia en anamòrfic', previousBody: 'Una peça realitzada fa tres anys. No és una referència exacta d’il·luminació, però sí del format anamòrfic i de la sensació d’espai tancat. Aquí, la diferència essencial és que el confinament contindrà també una forma d’alliberament.', youtube: 'Veure a YouTube',
-    scriptLabel: '06 — Guió literari', scriptIntro: 'Lectura completa · 6 pàgines · català i castellà', page: 'Pàgina', original: 'Obrir el PDF original', footer: 'Guió i direcció — Enrike Segarra · Setembre 2026',
+    scriptLabel: '07 — Guió literari', scriptIntro: 'Lectura completa · 6 pàgines · català i castellà', page: 'Pàgina', original: 'Obrir el PDF original', footer: 'Guió i direcció — Enrike Segarra · Setembre 2026',
     enlarge: 'Ampliar imatge', closeImage: 'Imatge ampliada', light: 'Mode clar', dark: 'Mode fosc',
   },
   es: {
-    nav: ['Mirada', 'Referencias', 'Dirección', 'Construcción', 'Intimidad', 'Guion'],
+    nav: ['Mirada', 'Referencias', 'Dirección', 'Construcción', 'Intimidad', 'Storyboard', 'Guion'],
     eyebrow: 'Dossier visual · Cortometraje · 3’30”', subtitle: 'Un refugio bajo la guerra. Dos cuerpos aferrados a la vida.', scroll: 'Entrar en el dossier',
     miradaLabel: '01 — La mirada', miradaTitle: 'La intimidad como refugio', miradaBody: 'El espacio es estrecho, oscuro y casi abstracto. Fuera, la guerra. Dentro, una sexualidad vivida como afecto, necesidad y último acto de libertad.',
     chapters: [
@@ -66,13 +67,14 @@ const copy = {
       ['Storyboard y planificación', 'La secuencia íntima contará con un storyboard específico donde se podrá ver plano a plano la posición de las personas intérpretes y de cámara, el encuadre, las partes del cuerpo visibles, las acciones representadas y los elementos que quedarán fuera de campo.', 'El objetivo es eliminar al máximo la incertidumbre antes de llegar al set. También se realizarán pruebas previas de encuadre e iluminación para que las personas intérpretes puedan entender visualmente cómo se representará la intimidad en la película.'],
       ['Rodaje', 'Las escenas íntimas se rodarán con el equipo mínimo imprescindible. Cualquier intérprete podrá comunicar un límite, incomodidad o necesidad de modificar una acción durante el proceso.', 'La intención es construir un espacio de trabajo basado en la preparación, la comunicación y la confianza, para que la vulnerabilidad que necesita la historia pueda existir dentro de un entorno seguro y controlado.'],
     ],
+    storyboardLabel: '06 — Storyboard', storyboardTitle: 'La secuencia, plano a plano', storyboardIntro: 'Una guía visual de la secuencia íntima: encuadres, gestos, miradas y posiciones de cámara pensados antes de llegar al rodaje.', shot: 'Plano',
     previousLabel: 'Referencia de trabajo anterior', previousTitle: 'Claustrofobia en anamórfico', previousBody: 'Una pieza realizada hace tres años. No es una referencia exacta de iluminación, pero sí del formato anamórfico y de la sensación de espacio cerrado. Aquí, la diferencia esencial es que el encierro contendrá también una forma de liberación.', youtube: 'Ver en YouTube',
-    scriptLabel: '06 — Guion literario', scriptIntro: 'Lectura completa · 6 páginas · catalán y castellano', page: 'Página', original: 'Abrir el PDF original', footer: 'Guion y dirección — Enrike Segarra · Septiembre 2026',
+    scriptLabel: '07 — Guion literario', scriptIntro: 'Lectura completa · 6 páginas · catalán y castellano', page: 'Página', original: 'Abrir el PDF original', footer: 'Guion y dirección — Enrike Segarra · Septiembre 2026',
     enlarge: 'Ampliar imagen', closeImage: 'Imagen ampliada', light: 'Modo claro', dark: 'Modo oscuro',
   },
 } as const;
 
-const ids = ['mirada', 'referencies', 'direccio', 'construccio', 'intimitat', 'guio'];
+const ids = ['mirada', 'referencies', 'direccio', 'construccio', 'intimitat', 'storyboard', 'guio'];
 const gallery: GalleryImage[][] = [
   [
     { src: '/images/videoframe_541466.png', alt: { cat: 'Ulls vistos entre fustes', es: 'Ojos vistos entre maderas' } },
@@ -89,6 +91,14 @@ const gallery: GalleryImage[][] = [
     { src: '/images/videoframe_630811.png', alt: { cat: 'Pell eriçada en macro', es: 'Piel erizada en macro' } },
   ],
 ];
+
+const storyboard: GalleryImage[] = Array.from({ length: 41 }, (_, index) => {
+  const number = String(index + 1).padStart(2, '0');
+  return {
+    src: `/storyboard/plano-${number}.png`,
+    alt: { cat: `Storyboard · Pla ${number}`, es: `Storyboard · Plano ${number}` },
+  };
+});
 
 const mounting = {
   cat: ['Estendre el plàstic per protegir el terra.', 'Cobrir el fons amb una manta fosca.', 'Repartir el mantell sec només a la zona visible.', 'Afegir palla de manera escassa i irregular.', 'Col·locar dues taules, una davant de l’altra.', 'Recolzar els llistons entre les taules, sense tallar ni cargolar.', 'Deixar separacions irregulars per crear la reixa i la sensació de trapa.'],
@@ -136,6 +146,7 @@ export default function Home() {
     <section className="director-section" id="direccio"><div className="director-sticky"><p className="eyebrow">{t.noteLabel}</p><h2>{t.noteTitle}</h2></div><div className="director-copy">{t.note.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></section>
     <section className="construction-section" id="construccio"><div className="construction-intro"><div><p className="eyebrow">{t.buildLabel}</p><h2>{t.buildTitle}</h2></div><p>{t.buildBody}</p></div><button className="construction-image" onClick={() => setSelected({ src: '/images/construccion-cenital.png', alt: { cat: 'Esquema real de construcció per al pla cenital', es: 'Esquema real de construcción para el plano cenital' } })} aria-label={t.enlarge}><img src="/images/construccion-cenital.png" alt={lang === 'cat' ? 'Esquema real de construcció per al pla cenital' : 'Esquema real de construcción para el plano cenital'}/><span>{t.enlarge} ＋</span></button><div className="construction-grid"><div className="mounting"><h3>{t.mounting}</h3><ol>{mounting[lang].map((step) => <li key={step}>{step}</li>)}</ol><p className="depth-note">{t.depth}</p><p className="safety-note">{t.safety}</p></div></div></section>
     <section className="intimacy-section" id="intimitat"><div className="intimacy-intro"><p className="eyebrow">{t.intimacyLabel}</p><h2>{t.intimacyTitle}</h2><p>{t.intimacyIntro}</p></div><div className="intimacy-list">{t.intimacySections.map(([title, first, second], index) => <article className="intimacy-item" key={title}><span>0{index + 1}</span><div><h3>{title}</h3><p>{first}</p><p>{second}</p></div></article>)}</div></section>
+    <section className="storyboard-section" id="storyboard"><div className="storyboard-intro"><div><p className="eyebrow">{t.storyboardLabel}</p><h2>{t.storyboardTitle}</h2></div><p>{t.storyboardIntro}</p></div><div className="storyboard-grid">{storyboard.map((item, index) => <figure className="storyboard-frame" key={item.src}><button className="storyboard-button" onClick={() => setSelected(item)} aria-label={`${t.enlarge}: ${item.alt[lang]}`}><img src={item.src} alt={item.alt[lang]} loading="lazy"/><span className="storyboard-number">{t.shot} {String(index + 1).padStart(2, '0')}</span><span className="zoom-mark" aria-hidden="true">＋</span></button></figure>)}</div></section>
     <section className="previous-work"><div className="youtube-frame"><iframe src="https://www.youtube-nocookie.com/embed/hAgSa0w1bzY?rel=0" title={t.previousTitle} loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen/></div><div className="previous-copy"><p className="eyebrow">{t.previousLabel}</p><h2>{t.previousTitle}</h2><p>{t.previousBody}</p><a className="text-link" href="https://www.youtube.com/watch?v=hAgSa0w1bzY" target="_blank" rel="noreferrer">{t.youtube}<Play size={15}/></a></div></section>
     <section className="script-section" id="guio"><div className="script-header"><div><p className="eyebrow">{t.scriptLabel}</p><h2>L’últim clau</h2><p>{t.scriptIntro}</p></div><a className="pdf-link" href={lang === 'cat' ? '/documents/guio-catala.pdf' : '/documents/guion-castellano.pdf'} target="_blank"><FileText size={18}/>{t.original}</a></div><div className="script-language"><button className={lang === 'cat' ? 'active' : ''} onClick={() => changeLanguage('cat')}>Versió catalana</button><button className={lang === 'es' ? 'active' : ''} onClick={() => changeLanguage('es')}>Versión castellana</button></div><div className="script-reader">{script.map((page, index) => <ScriptPage key={`${lang}-${index}`} text={page} index={index} lang={lang}/>)}</div></section>
     <footer><span>L’ÚLTIM CLAU</span><p>{t.footer}</p><a href="#top">↑</a></footer>
