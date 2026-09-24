@@ -5,7 +5,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { ArrowDown, ArrowUpRight, FileText, Moon, Play, Sun } from 'lucide-react';
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from '@/components/ui/dialog';
 import { Switch } from '@/components/ui/switch';
-import { screenplayCat, screenplayEs } from './screenplay-data';
+import { screenplayCat, screenplayEs, screenplayRoles } from './screenplay-data';
 
 type Lang = 'cat' | 'es';
 type Theme = 'dark' | 'light';
@@ -95,8 +95,12 @@ const mounting = {
   es: ['Extender el plástico para proteger el suelo.', 'Cubrir el fondo con una manta oscura.', 'Repartir el mantillo seco solo en la zona visible.', 'Añadir paja de manera escasa e irregular.', 'Colocar dos mesas, una frente a la otra.', 'Apoyar los listones entre las mesas, sin cortar ni atornillar.', 'Dejar separaciones irregulares para crear la rejilla y la sensación de trampilla.'],
 };
 
+const sceneHeading = /^(INT\.|EXT\.)/;
+const transition = /^(CORTE|FUNDIDO|TALL|FOS A|AL MISMO|AL MATEIX)/;
+
 function ScriptPage({ text, index, lang }: { text: string; index: number; lang: Lang }) {
-  return <article className="script-page" id={`script-page-${index + 1}`} aria-label={`${copy[lang].page} ${index + 1}`}><span className="script-page-number">{String(index + 1).padStart(2, '0')}</span><div className="script-lines">{text.split('\n').map((line, n) => { const s = line.trim(); const scene = /^(INT\.|EXT\.|CORTE|FUNDIDO|AL MISMO|AL MATEIX)/.test(s); const cue = s.length > 0 && s.length < 36 && s === s.toUpperCase(); const paren = s.startsWith('(') && s.endsWith(')'); return <p key={n} className={scene ? 'scene-line' : cue ? 'cue-line' : paren ? 'paren-line' : ''}>{line || '\u00a0'}</p>; })}</div></article>;
+  const roles = screenplayRoles[lang][index] ?? {};
+  return <article className="script-page" id={`script-page-${index + 1}`} aria-label={`${copy[lang].page} ${index + 1}`}><span className="script-page-number">{String(index + 1).padStart(2, '0')}</span><div className="script-lines">{text.split('\n').map((line, n) => { const content = line.trim(); const role = roles[n]; const lineClass = role ? `${role}-line` : sceneHeading.test(content) ? 'scene-line' : transition.test(content) ? 'transition-line' : 'action-line'; return <p key={n} className={lineClass}>{line || '\u00a0'}</p>; })}</div></article>;
 }
 
 export default function Home() {

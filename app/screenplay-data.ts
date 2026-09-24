@@ -16,3 +16,27 @@ export const screenplayEs = [
   "Laia lo mira.\nTiene miedo, pero también una extraña serenidad.\nLAIA\nSi nos encuentran...\nUn paso resuena justo encima de ellos.\nLAIA\n...que nos encuentren viviendo.\nDurante un instante, ninguno de los dos se mueve.\nDespués se besan.\nYa no hay delicadeza ni contención.\nHacen el amor con desesperación, con rabia, con la necesidad de aferrarse\na la vida durante unos segundos más.\nLos PASOS se aproximan mientras el movimiento de sus cuerpos se vuelve\ncada vez más intenso.\nMANOS buscando piel.\nDEDOS hundiéndose en una espalda.\nRESPIRACIONES aceleradas.\nLa MADERA cruje bajo sus cuerpos.\nUn soldado se detiene justo encima de ellos.\nSOLDADO NAZI (OFF)\n(en alemán; subtitulado en castellano)\nHier.\n(Aquí.)\nUna mano golpea la trampilla desde el exterior.\nMarc y Laia lo oyen.\nNo se detienen.\nLa trampilla comienza a abrirse.\nUna entrada violenta de luz blanca cae sobre sus cuerpos entrelazados.\nLas siluetas de los soldados aparecen sobre ellos.\nMarc y Laia no miran hacia arriba.\nContinúan haciendo el amor.\nMás deprisa.\nCon mayor intensidad.\nSolo se miran el uno al otro.\nLos soldados levantan las armas.\nLas respiraciones de Marc y Laia llegan al límite.\nLa madera cruje.\nLos dedos se aferran.\nSus cuerpos alcanzan el clímax.\nAL MISMO TIEMPO:\nUna RÁFAGA DE DISPAROS.\nUna LUZ BLANCA, intensa y violenta, devora completamente la imagen.\nCORTE A BLANCO.\nLa respiración de ambos se apaga entre los últimos disparos.\nSilencio.\nMantenemos el blanco durante unos segundos.",
   "Sobre el blanco:\nL'ÚLTIM CLAU\nFIN."
 ] as const;
+
+export type ScriptLineRole = 'character' | 'parenthetical' | 'dialogue';
+type ScriptPageRoles = Readonly<Record<number, ScriptLineRole>>;
+
+// These annotations preserve the literal PDF-derived text while making its
+// cinematic structure explicit. Every line not listed here is an action.
+export const screenplayRoles: Record<'cat' | 'es', readonly ScriptPageRoles[]> = {
+  cat: [
+    {},
+    { 24: 'character', 25: 'parenthetical', 26: 'dialogue', 27: 'character', 28: 'dialogue', 32: 'character', 33: 'dialogue', 37: 'character', 38: 'dialogue' },
+    { 6: 'character', 7: 'dialogue', 22: 'character', 23: 'dialogue', 31: 'character', 32: 'dialogue', 33: 'character', 34: 'dialogue' },
+    { 1: 'character', 2: 'parenthetical', 3: 'dialogue', 4: 'parenthetical', 5: 'character', 6: 'parenthetical', 7: 'parenthetical', 8: 'dialogue', 9: 'parenthetical', 10: 'character', 11: 'parenthetical', 12: 'parenthetical', 13: 'dialogue', 14: 'dialogue', 15: 'parenthetical', 16: 'parenthetical', 17: 'parenthetical', 22: 'character', 23: 'parenthetical', 24: 'dialogue', 29: 'character', 30: 'parenthetical', 31: 'dialogue', 32: 'parenthetical', 33: 'character', 34: 'parenthetical', 35: 'parenthetical', 36: 'dialogue', 37: 'parenthetical', 40: 'character', 41: 'dialogue', 42: 'character', 43: 'dialogue', 44: 'character', 45: 'dialogue', 46: 'character', 47: 'dialogue', 49: 'character', 50: 'dialogue' },
+    { 1: 'character', 2: 'dialogue', 4: 'character', 5: 'dialogue', 18: 'character', 19: 'parenthetical', 20: 'dialogue', 21: 'parenthetical' },
+    {},
+  ],
+  es: [
+    {},
+    { 26: 'character', 27: 'parenthetical', 28: 'dialogue', 29: 'character', 30: 'dialogue', 34: 'character', 35: 'dialogue', 39: 'character', 40: 'dialogue' },
+    { 6: 'character', 7: 'dialogue', 22: 'character', 23: 'dialogue', 32: 'character', 33: 'dialogue', 34: 'character', 35: 'dialogue' },
+    { 2: 'character', 3: 'parenthetical', 4: 'dialogue', 5: 'parenthetical', 6: 'character', 7: 'parenthetical', 8: 'parenthetical', 9: 'dialogue', 10: 'parenthetical', 11: 'character', 12: 'parenthetical', 13: 'parenthetical', 14: 'dialogue', 15: 'dialogue', 16: 'parenthetical', 17: 'parenthetical', 18: 'parenthetical', 23: 'character', 24: 'parenthetical', 25: 'dialogue', 30: 'character', 31: 'parenthetical', 32: 'dialogue', 33: 'parenthetical', 34: 'character', 35: 'parenthetical', 36: 'parenthetical', 37: 'dialogue', 38: 'parenthetical', 41: 'character', 42: 'dialogue', 43: 'character', 44: 'dialogue', 45: 'character', 46: 'dialogue', 47: 'character', 48: 'dialogue', 50: 'character', 51: 'dialogue' },
+    { 2: 'character', 3: 'dialogue', 5: 'character', 6: 'dialogue', 19: 'character', 20: 'parenthetical', 21: 'dialogue', 22: 'parenthetical' },
+    {},
+  ],
+};
